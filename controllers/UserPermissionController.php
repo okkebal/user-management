@@ -1,12 +1,12 @@
 <?php
 
-namespace webvimark\modules\UserManagement\controllers;
+namespace okkebal\modules\UserManagement\controllers;
 
-use webvimark\components\BaseController;
-use webvimark\modules\UserManagement\models\rbacDB\Permission;
-use webvimark\modules\UserManagement\models\rbacDB\Role;
-use webvimark\modules\UserManagement\models\User;
-use webvimark\modules\UserManagement\UserManagementModule;
+use okkebal\components\BaseController;
+use okkebal\modules\UserManagement\models\rbacDB\Permission;
+use okkebal\modules\UserManagement\models\rbacDB\Role;
+use okkebal\modules\UserManagement\models\User;
+use okkebal\modules\UserManagement\UserManagementModule;
 use yii\web\NotFoundHttpException;
 use Yii;
 

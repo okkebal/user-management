@@ -1,10 +1,10 @@
 <?php
 
-namespace webvimark\modules\UserManagement\models;
+namespace okkebal\modules\UserManagement\models;
 
 use Ikimea\Browser\Browser;
-use webvimark\helpers\LittleBigHelper;
-use webvimark\modules\UserManagement\UserManagementModule;
+use okkebal\helpers\LittleBigHelper;
+use okkebal\modules\UserManagement\UserManagementModule;
 use Yii;
 
 /**
@@ -22,7 +22,7 @@ use Yii;
  *
  * @property User $user
  */
-class UserVisitLog extends \webvimark\components\BaseActiveRecord
+class UserVisitLog extends \okkebal\components\BaseActiveRecord
 {
 	CONST SESSION_TOKEN = '__visitorToken';
 

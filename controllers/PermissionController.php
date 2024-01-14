@@ -1,15 +1,15 @@
 <?php
 
-namespace webvimark\modules\UserManagement\controllers;
+namespace okkebal\modules\UserManagement\controllers;
 
 
-use webvimark\modules\UserManagement\components\AuthHelper;
-use webvimark\modules\UserManagement\models\rbacDB\AbstractItem;
-use webvimark\modules\UserManagement\models\rbacDB\Permission;
-use webvimark\modules\UserManagement\models\rbacDB\Route;
-use webvimark\modules\UserManagement\models\rbacDB\search\PermissionSearch;
-use webvimark\components\AdminDefaultController;
-use webvimark\modules\UserManagement\UserManagementModule;
+use okkebal\modules\UserManagement\components\AuthHelper;
+use okkebal\modules\UserManagement\models\rbacDB\AbstractItem;
+use okkebal\modules\UserManagement\models\rbacDB\Permission;
+use okkebal\modules\UserManagement\models\rbacDB\Route;
+use okkebal\modules\UserManagement\models\rbacDB\search\PermissionSearch;
+use okkebal\components\AdminDefaultController;
+use okkebal\modules\UserManagement\UserManagementModule;
 use Yii;
 
 class PermissionController extends AdminDefaultController
@@ -17,12 +17,12 @@ class PermissionController extends AdminDefaultController
 	/**
 	 * @var Permission
 	 */
-	public $modelClass = 'webvimark\modules\UserManagement\models\rbacDB\Permission';
+	public $modelClass = 'okkebal\modules\UserManagement\models\rbacDB\Permission';
 
 	/**
 	 * @var PermissionSearch
 	 */
-	public $modelSearchClass = 'webvimark\modules\UserManagement\models\rbacDB\search\PermissionSearch';
+	public $modelSearchClass = 'okkebal\modules\UserManagement\models\rbacDB\search\PermissionSearch';
 
 	/**
 	 * @param string $id

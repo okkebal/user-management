@@ -1,6 +1,6 @@
 <?php
 use app\assets\AppAsset;
-use webvimark\modules\UserManagement\UserManagementModule;
+use okkebal\modules\UserManagement\UserManagementModule;
 use yii\bootstrap5\BootstrapAsset;
 use yii\helpers\Html;
 

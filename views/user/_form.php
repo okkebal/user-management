@@ -1,16 +1,16 @@
 <?php
 
-use webvimark\modules\UserManagement\models\User;
-use webvimark\modules\UserManagement\UserManagementModule;
+use okkebal\modules\UserManagement\models\User;
+use okkebal\modules\UserManagement\UserManagementModule;
 use yii\helpers\Html;
 use app\models\Families;
 use yii\bootstrap5\ActiveForm;
 use yii\helpers\ArrayHelper;
-use webvimark\extensions\BootstrapSwitch\BootstrapSwitch;
+use okkebal\extensions\BootstrapSwitch\BootstrapSwitch;
 
 /**
  * @var yii\web\View $this
- * @var webvimark\modules\UserManagement\models\User $model
+ * @var okkebal\modules\UserManagement\models\User $model
  * @var yii\bootstrap\ActiveForm $form
  */
 ?>

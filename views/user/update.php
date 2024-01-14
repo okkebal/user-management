@@ -1,14 +1,14 @@
 <?php
 
-use webvimark\modules\UserManagement\models\User;
-use webvimark\extensions\BootstrapSwitch\BootstrapSwitch;
-use webvimark\modules\UserManagement\UserManagementModule;
+use okkebal\modules\UserManagement\models\User;
+use okkebal\extensions\BootstrapSwitch\BootstrapSwitch;
+use okkebal\modules\UserManagement\UserManagementModule;
 use yii\bootstrap5\ActiveForm;
 use yii\helpers\Html;
 
 /**
  * @var yii\web\View $this
- * @var webvimark\modules\UserManagement\models\User $model
+ * @var okkebal\modules\UserManagement\models\User $model
  */
 
 $this->title = UserManagementModule::t('back', 'Editing user: ') . ' ' . $model->username;

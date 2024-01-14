@@ -10,9 +10,9 @@
  * @var yii\rbac\Role $role
  */
 
-use webvimark\modules\UserManagement\components\GhostHtml;
-use webvimark\modules\UserManagement\models\rbacDB\Role;
-use webvimark\modules\UserManagement\UserManagementModule;
+use okkebal\modules\UserManagement\components\GhostHtml;
+use okkebal\modules\UserManagement\models\rbacDB\Role;
+use okkebal\modules\UserManagement\UserManagementModule;
 use yii\helpers\ArrayHelper;
 use yii\helpers\Html;
 
