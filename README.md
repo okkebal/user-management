@@ -1,6 +1,8 @@
 User management module for Yii 2
 =====
 
+Updated to work with Bootstrap 5 and PHP 8.1
+
 Perks
 ---
 
