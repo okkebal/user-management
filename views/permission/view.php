@@ -96,7 +96,7 @@ $this->params['breadcrumbs'][] = $this->title;
 						UserManagementModule::t('back', 'Refresh routes (and delete unused)'),
 						['refresh-routes', 'id'=>$item->name, 'deleteUnused'=>1],
 						[
-							'class' => 'btn btn-default btn-sm pull-right',
+							'class' => 'btn btn-primary btn-sm pull-right',
 							'style'=>'margin-top:-5px; text-transform:none;',
 							'data-confirm'=>UserManagementModule::t('back', 'Routes that are not exists in this application will be deleted. Do not recommended for application with "advanced" structure, because frontend and backend have they own set of routes.'),
 						]
@@ -106,7 +106,7 @@ $this->params['breadcrumbs'][] = $this->title;
 						UserManagementModule::t('back', 'Refresh routes'),
 						['refresh-routes', 'id'=>$item->name],
 						[
-							'class' => 'btn btn-default btn-sm pull-right',
+							'class' => 'btn btn-primary btn-sm pull-right',
 							'style'=>'margin-top:-5px; text-transform:none;',
 						]
 					) ?>
@@ -132,10 +132,10 @@ $this->params['breadcrumbs'][] = $this->title;
 					</div>
 
 					<div class="col-sm-3 text-right">
-						<span id="show-only-selected-routes" class="btn btn-default btn-sm">
+						<span id="show-only-selected-routes" class="btn btn-primary btn-sm">
 							<i class="fa fa-minus"></i> <?= UserManagementModule::t('back', 'Show only selected'); ?>
 						</span>
-						<span id="show-all-routes" class="btn btn-default btn-sm hide">
+						<span id="show-all-routes" class="btn btn-primary btn-sm hide">
 							<i class="fa fa-plus"></i> <?= UserManagementModule::t('back', 'Show all'); ?>
 						</span>
 

@@ -3,7 +3,9 @@
 use webvimark\modules\UserManagement\models\User;
 use webvimark\modules\UserManagement\UserManagementModule;
 use yii\helpers\Html;
-use yii\bootstrap\ActiveForm;
+use app\models\Families;
+use yii\bootstrap5\ActiveForm;
+use yii\helpers\ArrayHelper;
 use webvimark\extensions\BootstrapSwitch\BootstrapSwitch;
 
 /**
@@ -41,6 +43,12 @@ use webvimark\extensions\BootstrapSwitch\BootstrapSwitch;
 			->hint(UserManagementModule::t('back','For example: 123.34.56.78, 168.111.192.12')) ?>
 
 	<?php endif; ?>
+    <?= $form->field($model, 'familie_id')->dropDownList(
+        ArrayHelper::map(
+            Families::find()->all(),'id','naam'),
+        ['prompt'=>'Kies een familie']
+
+    ) ?>
 
 	<?php if ( User::hasPermission('editUserEmail') ): ?>
 

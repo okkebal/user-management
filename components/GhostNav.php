@@ -2,7 +2,7 @@
 namespace webvimark\modules\UserManagement\components;
 
 use webvimark\modules\UserManagement\models\User;
-use yii\bootstrap\Nav;
+use yii\bootstrap5\Nav;
 
 /**
  * Class GhostNav

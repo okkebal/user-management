@@ -15,7 +15,8 @@ class UserSearch extends User
 	public function rules()
 	{
 		return [
-			[['id', 'superadmin', 'status', 'created_at', 'updated_at', 'email_confirmed'], 'integer'],
+            [['created_at', 'updated_at'], 'safe'],
+			[['id', 'superadmin', 'status', 'email_confirmed'], 'integer'],
 			[['username', 'gridRoleSearch', 'registration_ip', 'email'], 'string'],
 		];
 	}

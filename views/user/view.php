@@ -30,7 +30,7 @@ $this->params['breadcrumbs'][] = $this->title;
 			<?= GhostHtml::a(
 				UserManagementModule::t('back', 'Roles and permissions'),
 				['/user-management/user-permission/set', 'id'=>$model->id],
-				['class' => 'btn btn-sm btn-default']
+				['class' => 'btn btn-sm btn-primary']
 			) ?>
 
 			<?= GhostHtml::a(UserManagementModule::t('back', 'Delete'), ['delete', 'id' => $model->id], [
