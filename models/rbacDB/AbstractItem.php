@@ -1,9 +1,9 @@
 <?php
-namespace okkebal\modules\UserManagement\models\rbacDB;
+namespace webvimark\modules\UserManagement\models\rbacDB;
 
-use okkebal\modules\UserManagement\components\AuthHelper;
-use okkebal\modules\UserManagement\components\AbstractItemEvent;
-use okkebal\modules\UserManagement\UserManagementModule;
+use webvimark\modules\UserManagement\components\AuthHelper;
+use webvimark\modules\UserManagement\components\AbstractItemEvent;
+use webvimark\modules\UserManagement\UserManagementModule;
 use Yii;
 use yii\base\Event;
 use yii\base\ModelEvent;

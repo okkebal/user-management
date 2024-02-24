@@ -1,6 +1,6 @@
 <?php
 
-use okkebal\modules\UserManagement\UserManagementModule;
+use webvimark\modules\UserManagement\UserManagementModule;
 
 /**
  * @var yii\web\View $this

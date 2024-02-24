@@ -1,11 +1,11 @@
 <?php
 
-namespace okkebal\modules\UserManagement\controllers;
+namespace webvimark\modules\UserManagement\controllers;
 
-use okkebal\components\AdminDefaultController;
+use webvimark\components\AdminDefaultController;
 use Yii;
-use okkebal\modules\UserManagement\models\User;
-use okkebal\modules\UserManagement\models\search\UserSearch;
+use app\models\User;
+use app\models\UserSearch;
 use yii\web\NotFoundHttpException;
 
 /**
@@ -16,12 +16,12 @@ class UserController extends AdminDefaultController
 	/**
 	 * @var User
 	 */
-	public $modelClass = 'okkebal\modules\UserManagement\models\User';
+	public $modelClass = 'app\models\User';
 
 	/**
 	 * @var UserSearch
 	 */
-	public $modelSearchClass = 'okkebal\modules\UserManagement\models\search\UserSearch';
+	public $modelSearchClass = 'app\models\UserSearch';
 
 	/**
 	 * @return mixed|string|\yii\web\Response

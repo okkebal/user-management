@@ -1,13 +1,14 @@
 <?php
 
-use okkebal\modules\UserManagement\UserManagementModule;
-use yii\bootstrap5\ActiveForm;
+use webvimark\modules\UserManagement\UserManagementModule;
+use kartik\widgets\ActiveForm;
 use yii\captcha\Captcha;
+use app\models\Site;
 use yii\helpers\Html;
 
 /**
  * @var yii\web\View $this
- * @var okkebal\modules\UserManagement\models\forms\PasswordRecoveryForm $model
+ * @var webvimark\modules\UserManagement\models\forms\PasswordRecoveryForm $model
  */
 
 $this->title = UserManagementModule::t('front', 'Password recovery');
@@ -16,8 +17,11 @@ $this->params['breadcrumbs'][] = $this->title;
 
 <div class="password-recovery">
 
-	<h2 class="text-center"><?= $this->title ?></h2>
-
+	<h1><i class="fa-solid fa-circle-question"></i> <?= $this->title ?></h1>
+    <p>
+        <?= Html::a(Yii::t('app', Site::ICON_BACK.' Terug'),
+            ['/'], ['class' => 'btn btn-success']) ?>
+    </p>
 	<?php if ( Yii::$app->session->hasFlash('error') ): ?>
 		<div class="alert-alert-warning text-center">
 			<?= Yii::$app->session->getFlash('error') ?>
@@ -25,14 +29,14 @@ $this->params['breadcrumbs'][] = $this->title;
 	<?php endif; ?>
 
 	<?php $form = ActiveForm::begin([
+        'type'=> ActiveForm::TYPE_FLOATING,
 		'id'=>'user',
-		'layout'=>'horizontal',
 		'validateOnBlur'=>false,
 	]); ?>
 
 	<?= $form->field($model, 'email')->textInput(['maxlength' => 255, 'autofocus'=>true]) ?>
 
-	<?= $form->field($model, 'captcha')->widget(Captcha::className(), [
+	<?= $form->field($model, 'captcha')->label(false)->widget(Captcha::className(), [
 		'template' => '<div class="row"><div class="col-sm-2">{image}</div><div class="col-sm-3">{input}</div></div>',
 		'captchaAction'=>['/user-management/auth/captcha']
 	]) ?>
@@ -40,7 +44,7 @@ $this->params['breadcrumbs'][] = $this->title;
 	<div class="form-group">
 		<div class="col-sm-offset-3 col-sm-9">
 			<?= Html::submitButton(
-				'<span class="glyphicon glyphicon-ok"></span> ' . UserManagementModule::t('front', 'Recover'),
+				'<i class="fa-regular fa-envelope"></i> ' . UserManagementModule::t('front', 'Recover'),
 				['class' => 'btn btn-primary']
 			) ?>
 		</div>

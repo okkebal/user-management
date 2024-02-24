@@ -1,11 +1,11 @@
 <?php
 
-use okkebal\modules\UserManagement\UserManagementModule;
+use webvimark\modules\UserManagement\UserManagementModule;
 use yii\helpers\Html;
 
 /**
  * @var yii\web\View $this
- * @var okkebal\modules\UserManagement\models\rbacDB\AuthItemGroup $model
+ * @var webvimark\modules\UserManagement\models\rbacDB\AuthItemGroup $model
  */
 
 $this->title = UserManagementModule::t('back', 'Editing permission group') . ': ' . $model->name;

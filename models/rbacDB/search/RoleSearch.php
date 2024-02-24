@@ -1,5 +1,5 @@
 <?php
-namespace okkebal\modules\UserManagement\models\rbacDB\search;
+namespace webvimark\modules\UserManagement\models\rbacDB\search;
 
 class RoleSearch extends AbstractItemSearch
 {

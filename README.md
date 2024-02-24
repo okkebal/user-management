@@ -1,8 +1,6 @@
 User management module for Yii 2
 =====
 
-Updated to work with Bootstrap 5 and PHP 8.1
-
 Perks
 ---
 
@@ -42,18 +40,18 @@ Configuration
 
 'components'=>[
 	'user' => [
-		'class' => 'okkebal\modules\UserManagement\components\UserConfig',
+		'class' => 'webvimark\modules\UserManagement\components\UserConfig',
 
 		// Comment this if you don't want to record user logins
 		'on afterLogin' => function($event) {
-				\okkebal\modules\UserManagement\models\UserVisitLog::newVisitor($event->identity->id);
+				\webvimark\modules\UserManagement\models\UserVisitLog::newVisitor($event->identity->id);
 			}
 	],
 ],
 
 'modules'=>[
 	'user-management' => [
-		'class' => 'okkebal\modules\UserManagement\UserManagementModule',
+		'class' => 'webvimark\modules\UserManagement\UserManagementModule',
 
 		// 'enableRegistration' => true,
 
@@ -98,8 +96,8 @@ To see full list of options check *UserManagementModule* file
 
 'modules'=>[
 	'user-management' => [
-		'class' => 'okkebal\modules\UserManagement\UserManagementModule',
-	        'controllerNamespace'=>'vendor\okkebal\modules\UserManagement\controllers', // To prevent yii help from crashing
+		'class' => 'webvimark\modules\UserManagement\UserManagementModule',
+	        'controllerNamespace'=>'vendor\webvimark\modules\UserManagement\controllers', // To prevent yii help from crashing
 	],
 ],
 
@@ -121,7 +119,7 @@ public function behaviors()
 {
 	return [
 		'ghost-access'=> [
-			'class' => 'okkebal\modules\UserManagement\components\GhostAccessControl',
+			'class' => 'webvimark\modules\UserManagement\components\GhostAccessControl',
 		],
 	];
 }
@@ -134,8 +132,8 @@ Where you can go
 ```php
 
 <?php
-use okkebal\modules\UserManagement\components\GhostMenu;
-use okkebal\modules\UserManagement\UserManagementModule;
+use webvimark\modules\UserManagement\components\GhostMenu;
+use webvimark\modules\UserManagement\UserManagementModule;
 
 echo GhostMenu::widget([
 	'encodeLabels'=>false,
@@ -233,7 +231,7 @@ Events can be handled via config file like following
 
 'modules'=>[
 	'user-management' => [
-		'class' => 'okkebal\modules\UserManagement\UserManagementModule',
+		'class' => 'webvimark\modules\UserManagement\UserManagementModule',
 		'on afterRegistration' => function(UserAuthEvent $event) {
 			// Here you can do your own stuff like assign roles, send emails and so on
 		},

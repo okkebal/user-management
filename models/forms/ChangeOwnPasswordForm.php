@@ -1,8 +1,8 @@
 <?php
-namespace okkebal\modules\UserManagement\models\forms;
+namespace webvimark\modules\UserManagement\models\forms;
 
-use okkebal\modules\UserManagement\models\User;
-use okkebal\modules\UserManagement\UserManagementModule;
+use webvimark\modules\UserManagement\models\User;
+use webvimark\modules\UserManagement\UserManagementModule;
 use yii\base\Model;
 use Yii;
 

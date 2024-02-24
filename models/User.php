@@ -1,14 +1,14 @@
 <?php
 
-namespace okkebal\modules\UserManagement\models;
+namespace webvimark\modules\UserManagement\models;
 
-use okkebal\helpers\LittleBigHelper;
-use okkebal\helpers\Singleton;
-use okkebal\modules\UserManagement\components\AuthHelper;
-use okkebal\modules\UserManagement\components\UserIdentity;
-use okkebal\modules\UserManagement\models\rbacDB\Role;
-use okkebal\modules\UserManagement\models\rbacDB\Route;
-use okkebal\modules\UserManagement\UserManagementModule;
+use webvimark\helpers\LittleBigHelper;
+use webvimark\helpers\Singleton;
+use webvimark\modules\UserManagement\components\AuthHelper;
+use webvimark\modules\UserManagement\components\UserIdentity;
+use webvimark\modules\UserManagement\models\rbacDB\Role;
+use webvimark\modules\UserManagement\models\rbacDB\Route;
+use webvimark\modules\UserManagement\UserManagementModule;
 use Yii;
 use yii\behaviors\TimestampBehavior;
 

@@ -1,7 +1,7 @@
 <?php
-namespace okkebal\modules\UserManagement\components;
+namespace webvimark\modules\UserManagement\components;
 
-use okkebal\modules\UserManagement\models\User;
+use webvimark\modules\UserManagement\models\User;
 use yii\base\Security;
 use yii\db\ActiveRecord;
 use yii\web\IdentityInterface;

@@ -1,8 +1,8 @@
 <?php
-namespace okkebal\modules\UserManagement\models\rbacDB;
+namespace webvimark\modules\UserManagement\models\rbacDB;
 
 use Exception;
-use okkebal\modules\UserManagement\components\AuthHelper;
+use webvimark\modules\UserManagement\components\AuthHelper;
 use Yii;
 use yii\rbac\DbManager;
 

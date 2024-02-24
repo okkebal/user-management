@@ -1,9 +1,9 @@
 {
-	"name": "okkebal/module-user-management",
+	"name": "webvimark/module-user-management",
 	"description": "User with improved RBAC",
 	"autoload": {
 		"psr-4": {
-			"okkebal\\modules\\UserManagement\\": ""
+			"webvimark\\modules\\UserManagement\\": ""
 		}
 	},
 	"require": {

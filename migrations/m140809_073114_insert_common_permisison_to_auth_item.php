@@ -2,7 +2,7 @@
 
 use yii\db\Schema;
 use yii\db\Migration;
-use okkebal\modules\UserManagement\models\rbacDB\Permission;
+use webvimark\modules\UserManagement\models\rbacDB\Permission;
 
 class m140809_073114_insert_common_permisison_to_auth_item extends Migration
 {

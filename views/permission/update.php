@@ -1,10 +1,10 @@
 <?php
 /**
  * @var yii\widgets\ActiveForm $form
- * @var okkebal\modules\UserManagement\models\rbacDB\Permission $model
+ * @var webvimark\modules\UserManagement\models\rbacDB\Permission $model
  */
 
-use okkebal\modules\UserManagement\UserManagementModule;
+use webvimark\modules\UserManagement\UserManagementModule;
 
 $this->title = UserManagementModule::t('back', 'Editing permission: ') . ' ' . $model->name;
 $this->params['breadcrumbs'][] = ['label' => UserManagementModule::t('back', 'Permissions'), 'url' => ['index']];

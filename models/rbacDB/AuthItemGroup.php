@@ -1,8 +1,8 @@
 <?php
 
-namespace okkebal\modules\UserManagement\models\rbacDB;
+namespace webvimark\modules\UserManagement\models\rbacDB;
 
-use okkebal\modules\UserManagement\UserManagementModule;
+use webvimark\modules\UserManagement\UserManagementModule;
 use Yii;
 use yii\behaviors\TimestampBehavior;
 

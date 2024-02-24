@@ -1,12 +1,12 @@
 <?php
 
-use okkebal\modules\UserManagement\UserManagementModule;
+use webvimark\modules\UserManagement\UserManagementModule;
 use yii\helpers\Html;
 use yii\widgets\DetailView;
 
 /**
  * @var yii\web\View $this
- * @var okkebal\modules\UserManagement\models\UserVisitLog $model
+ * @var webvimark\modules\UserManagement\models\UserVisitLog $model
  */
 
 $this->title = $model->id;

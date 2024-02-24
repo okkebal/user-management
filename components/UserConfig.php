@@ -1,20 +1,20 @@
 <?php
 
-namespace okkebal\modules\UserManagement\components;
+namespace webvimark\modules\UserManagement\components;
 
 use yii\web\User;
 use Yii;
 
 /**
  * Class UserConfig
- * @package okkebal\modules\UserManagement\components
+ * @package webvimark\modules\UserManagement\components
  */
 class UserConfig extends User
 {
 	/**
 	 * @inheritdoc
 	 */
-	public $identityClass = 'okkebal\modules\UserManagement\models\User';
+	public $identityClass = 'app\models\User';
 
 	/**
 	 * @inheritdoc

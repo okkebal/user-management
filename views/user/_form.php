@@ -1,16 +1,16 @@
 <?php
 
-use okkebal\modules\UserManagement\models\User;
-use okkebal\modules\UserManagement\UserManagementModule;
+use app\models\User;
+use webvimark\modules\UserManagement\UserManagementModule;
 use yii\helpers\Html;
 use app\models\Families;
 use yii\bootstrap5\ActiveForm;
 use yii\helpers\ArrayHelper;
-use okkebal\extensions\BootstrapSwitch\BootstrapSwitch;
+use webvimark\extensions\BootstrapSwitch\BootstrapSwitch;
 
 /**
  * @var yii\web\View $this
- * @var okkebal\modules\UserManagement\models\User $model
+ * @var webvimark\modules\UserManagement\models\User $model
  * @var yii\bootstrap\ActiveForm $form
  */
 ?>
@@ -35,7 +35,7 @@ use okkebal\extensions\BootstrapSwitch\BootstrapSwitch;
 		<?= $form->field($model, 'repeat_password')->passwordInput(['maxlength' => 255, 'autocomplete'=>'off']) ?>
 	<?php endif; ?>
 
-
+    <?= $form->field($model, 'SHOW_OTHER_PATIENTS')->checkbox(['class'=>'form-check-input']) ?>
 	<?php if ( User::hasPermission('bindUserToIp') ): ?>
 
 		<?= $form->field($model, 'bind_to_ip')
@@ -50,6 +50,12 @@ use okkebal\extensions\BootstrapSwitch\BootstrapSwitch;
 
     ) ?>
 
+    <?= $form->field($model, 'org_id')->dropDownList(
+        ArrayHelper::map(
+            \app\models\Organisaties::find()->all(),'id','naam'),
+        ['prompt'=>'Kies een organisatie']
+
+    ) ?>
 	<?php if ( User::hasPermission('editUserEmail') ): ?>
 
 		<?= $form->field($model, 'email')->textInput(['maxlength' => 255]) ?>

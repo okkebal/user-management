@@ -1,9 +1,9 @@
 <?php
-namespace okkebal\modules\UserManagement\models\forms;
+namespace webvimark\modules\UserManagement\models\forms;
 
-use okkebal\helpers\LittleBigHelper;
-use okkebal\modules\UserManagement\models\User;
-use okkebal\modules\UserManagement\UserManagementModule;
+use webvimark\helpers\LittleBigHelper;
+use webvimark\modules\UserManagement\models\User;
+use webvimark\modules\UserManagement\UserManagementModule;
 use yii\base\Model;
 use Yii;
 
@@ -11,7 +11,7 @@ class LoginForm extends Model
 {
 	public $username;
 	public $password;
-	public $rememberMe = false;
+	public $rememberMe = true;
 
 	private $_user = false;
 
