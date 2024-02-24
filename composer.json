@@ -8,7 +8,7 @@
 	},
 	"require": {
 		"okkebal/components": "^1.0.0",
-		"webvimark/bootstrap-switch": "^1.0.0",
+		"okkebal/bootstrap-switch": "^1.0.0",
 		"ikimea/browser": "1.12.0",
 		"okkebal/date-range-picker": "^1.0.0",
 		"okkebal/helpers": "^1.0.0",
