@@ -7,34 +7,12 @@
 		}
 	},
 	"require": {
-		"okkebal/components": "*",
-		"okkebal/bootstrap-switch": "*",
+		"webvimark/components": "^1.0.0",
+		"webvimark/bootstrap-switch": "^1.0.0",
 		"ikimea/browser": "1.12.0",
-		"okkebal/date-range-picker": "*",
-		"okkebal/helpers": "*",
-		"okkebal/grid-bulk-actions": "*",
-		"okkebal/grid-page-size": "*"
-	},
-	"repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/okkebal/helpers"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/okkebal/components"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/okkebal/date-range-picker"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/okkebal/grid-page-size"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/okkebal/grid-bulk-actions"
-        }
-		]
+		"webvimark/date-range-picker": "^1.0.0",
+		"webvimark/helpers": "^1.0.0",
+		"webvimark/grid-bulk-actions": "^1.0.0",
+		"webvimark/grid-page-size": "^1.0.0"
+	}
 }
