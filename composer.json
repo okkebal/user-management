@@ -14,5 +14,27 @@
 		"okkebal/helpers": "*",
 		"okkebal/grid-bulk-actions": "*",
 		"okkebal/grid-page-size": "*"
-	}
+	},
+	"repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/okkebal/helpers"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/okkebal/components"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/okkebal/date-range-picker"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/okkebal/grid-page-size"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/okkebal/grid-bulk-actions"
+        }
+		]
 }
