@@ -130,8 +130,9 @@ class AuthController extends BaseController
 
 			// Ajax validation breaks captcha. See https://github.com/yiisoft/yii2/issues/6115
 			// Thanks to TomskDiver
-			$validateAttributes = $model->attributes;
-			unset($validateAttributes['captcha']);
+            $validateAttributes = array_keys($model->attributes);
+            $key = array_search ('captcha', $validateAttributes);
+            unset($validateAttributes[$key]);
 
 			return ActiveForm::validate($model, $validateAttributes);
 		}
@@ -222,8 +223,9 @@ class AuthController extends BaseController
 
 			// Ajax validation breaks captcha. See https://github.com/yiisoft/yii2/issues/6115
 			// Thanks to TomskDiver
-			$validateAttributes = $model->attributes;
-			unset($validateAttributes['captcha']);
+            $validateAttributes = array_keys($model->attributes);
+            $key = array_search ('captcha', $validateAttributes);
+            unset($validateAttributes[$key]);
 
 			return ActiveForm::validate($model, $validateAttributes);
 		}
