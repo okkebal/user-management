@@ -1,8 +1,10 @@
 <?php
 namespace webvimark\modules\UserManagement\models\forms;
 
+use app\components\alert;
 use webvimark\modules\UserManagement\models\User;
 use webvimark\modules\UserManagement\UserManagementModule;
+use xstreamka\recaptcha\ReCaptcha;
 use yii\base\Model;
 use Yii;
 
@@ -29,9 +31,7 @@ class PasswordRecoveryForm extends Model
 	public function rules()
 	{
 		return [
-			['captcha', 'captcha', 'captchaAction'=>'/user-management/auth/captcha'],
-
-			[['email', 'captcha'], 'required'],
+			[['email'], 'required'],
 			['email', 'trim'],
 			['email', 'email'],
 
@@ -89,6 +89,11 @@ class PasswordRecoveryForm extends Model
 		{
 			return false;
 		}
+
+        if (!ReCaptcha::validate()) {
+            alert::setErrorFlash('Validatie formulier mislukt, probeer het opnieuw');
+            return false;
+        }
 
 		$this->user->generateConfirmationToken();
 		$this->user->save(false);

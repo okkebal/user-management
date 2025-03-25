@@ -127,14 +127,7 @@ class AuthController extends BaseController
 		{
 
 			Yii::$app->response->format = Response::FORMAT_JSON;
-
-			// Ajax validation breaks captcha. See https://github.com/yiisoft/yii2/issues/6115
-			// Thanks to TomskDiver
-            $validateAttributes = array_keys($model->attributes);
-            $key = array_search ('captcha', $validateAttributes);
-            unset($validateAttributes[$key]);
-
-			return ActiveForm::validate($model, $validateAttributes);
+			return ActiveForm::validate($model);
 		}
 
 		if ( $model->load(Yii::$app->request->post()) AND $model->validate() )
@@ -273,6 +266,11 @@ class AuthController extends BaseController
 			throw new NotFoundHttpException(UserManagementModule::t('front', 'Token not found. It may be expired. Try reset password once more'));
 		}
 
+        $user->email_confirmed = 1;
+        $user->username = $user->email;
+        $user->detachBehavior('TimestampBehavior');
+        $user->save(false);
+
 		$model = new ChangeOwnPasswordForm([
 			'scenario'=>'restoreViaEmail',
 			'user'=>$user,
@@ -292,6 +290,9 @@ class AuthController extends BaseController
 
 				if ( $this->triggerModuleEvent(UserAuthEvent::AFTER_PASSWORD_RECOVERY_COMPLETE, ['model'=>$model]) )
 				{
+                    $user->removeConfirmationToken();
+                    $user->detachBehavior('TimestampBehavior');
+                    $user->save(false);
 					return $this->renderIsAjax('changeOwnPasswordSuccess');
 				}
 			}
